@@ -31,8 +31,9 @@ deploy:
   api_key:
     secure: ahdyrQTrNcH7E+6JJH5oejrjnwBw51QsdXwa4wrUOTzksWGNb7CU4TXGyCqeLEjlIX68v1iszM++T/Di4D3KFmzitqecZuyfRFecXpfvNZ5l8hK+/BoMwRqNIpbE+SDpLKQVxR4rgEJcSM0+7vIjGZ3SbffjljqIr8lMbtlfvq4P4xIAAPjN64mo7sM+HMJ/hF2mcGykacfuLZOzE56+FmIhLDRtbWeTii3Da/G8JHVdKvCnyzwXZrjkgKKasN/0c2xrw8a8XVF4nr9vrdWxmoBJ+rYqE8qKtKN3Yiq/77cLVpYyOXjuPw6+V8f9qVBYpnrr/a29eHCLwA94WoKwqmGUe0j9919X/hxk8RwybXsz3CO6TYsqgi0TjnvA5QrW4y0JqlW5WrAM5c3bmFT0BvSN8KZ82w/4te9xsvZI36nfyEsr8oMsDj4egxWqHEiMxVITYnl+y09NGnMNtCPl+rDmD+WmRdCr/lcbvkhwB/foQIohEWvzx1RivL9kuNp21jdPzY+V8tdKyV1HWpPelRoSp/J9Ke98T15zwVeQX4UITx5dhWhZYQ2Wl7KkuQkKFR8Y5HZ00TXzz4TIGSbbvb3AvwS1cq6WkdeTbAYpdtVAs0l2ZodnPdSohWKbtfJcW3CxYNZeyUuw54rL7bDw/vs+f7dy79aonW6zHzAv76U=
   skip_cleanup: true
-  file: target/sonar-stash-plugin-*.jar
+  file: target/sonar-stash-plugin-*
   draft: false
   on:
     repo: edekadigital/sonar-stash
-    tags: true
+    tags: false
+    condition: $TEST_SUITE = integration
