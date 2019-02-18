@@ -34,4 +34,3 @@ deploy:
   draft: true
   on:
     repo: edekadigital/sonar-stash
-    tags: true
